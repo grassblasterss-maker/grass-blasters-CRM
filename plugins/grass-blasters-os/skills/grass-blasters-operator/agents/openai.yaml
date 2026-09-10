@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grass Blasters Operator"
+  short_description: "Operate Grass Blasters through connected business apps"
+  default_prompt: "Give me the Grass Blasters owner brief and handle what is safe."

@@ -1,0 +1,11 @@
+{
+  "name": "grass-blasters-os",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "check": "node --check api/health.js && node --check api/integrations/status.js && node --check api/tools/execute.js && node --check api/tools/manifest.js && node --check api/zapier/intake.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=20" }
+}

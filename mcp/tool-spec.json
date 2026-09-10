@@ -1,0 +1,15 @@
+{
+  "server":"Grass Blasters OS",
+  "version":"0.3.0",
+  "architecture":"ChatGPT subscription + Grass Blasters skills + Zapier MCP. A custom Grass Blasters MCP server is optional later.",
+  "principle":"The web UI and ChatGPT use the same risk rules even when Zapier MCP performs the action.",
+  "read_tools":["search_clients","get_client","get_client_timeline","get_open_opportunities","get_open_quotes","get_jobs","get_schedule","get_overdue_invoices","get_tasks"],
+  "green_write_tools":["create_internal_task","add_internal_note","draft_email","draft_sms"],
+  "yellow_write_tools":["create_jobber_request","send_customer_email","send_customer_text","reschedule_visit","update_customer_record"],
+  "red_write_tools":["send_invoice","issue_refund","change_pricing","cancel_job","delete_record","bulk_message"],
+  "execution": {
+    "v1":"Zapier MCP calls Jobber and Zapier Tables directly from ChatGPT.",
+    "dashboard":"POST /api/tools/execute forwards approved requests to a Zapier action webhook.",
+    "future":"Expose composite tools through a private Grass Blasters MCP server only when repeated multi-call workflows justify it."
+  }
+}

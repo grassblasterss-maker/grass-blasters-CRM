@@ -1,0 +1,7 @@
+key,value,value_type,description,updated_at
+lead_response_minutes,15,number,Lead response target during business hours,2026-09-09T00:00:00Z
+quote_followup_days,3,number,Days after sent quote before follow-up,2026-09-09T00:00:00Z
+high_value_opportunity,5000,currency,High-value opportunity threshold,2026-09-09T00:00:00Z
+large_opportunity,10000,currency,Large opportunity threshold,2026-09-09T00:00:00Z
+invoice_escalation_days,30,number,Overdue invoice escalation threshold,2026-09-09T00:00:00Z
+red_tools_enabled,false,boolean,Financial and destructive tools stay disabled,2026-09-09T00:00:00Z

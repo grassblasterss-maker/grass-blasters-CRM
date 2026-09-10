@@ -1,0 +1,2 @@
+external_key,type,priority,title,client_name,jobber_client_id,jobber_record_id,due_at,owner,status,reason,dollar_impact,source,updated_at
+sample:quote:4821,quote_followup,high,Follow up on quote,Sample Customer,jobber-client-id,4821,2026-09-12T13:00:00Z,Dominic,open,Quote sent 3 days ago,5000,jobber,2026-09-09T00:00:00Z

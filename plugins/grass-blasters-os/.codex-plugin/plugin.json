@@ -1,0 +1,18 @@
+{
+  "name": "grass-blasters-os",
+  "version": "0.3.0",
+  "description": "Operate Grass Blasters through Jobber, Zapier, Gmail, Calendar, and the Grass Blasters work queue.",
+  "author": {
+    "name": "Grass Blasters LLC"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Grass Blasters OS",
+    "shortDescription": "Run daily sales, field, and collections workflows.",
+    "longDescription": "A private operating plugin for Grass Blasters LLC. It turns connected Jobber, Zapier, Gmail, and Calendar tools into consistent owner briefs, lead handling, operations triage, and approval-controlled execution.",
+    "developerName": "Grass Blasters LLC",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": "Give me the Grass Blasters owner brief. Rank the top issues by urgency and dollar impact, then tell me what you can safely handle."
+  }
+}

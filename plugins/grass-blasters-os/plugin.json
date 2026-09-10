@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "grass-blasters-os",
+  "version": "0.3.0",
+  "description": "Operate Grass Blasters through Jobber, Zapier, Gmail, Calendar, and the Grass Blasters work queue.",
+  "author": {"name":"Grass Blasters LLC"},
+  "repository": "https://github.com/grassblasterss-maker/grass-blasters-CRM",
+  "keywords": ["landscaping", "jobber", "crm", "operations", "sales"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Grass Blasters OS",
+        "shortDescription": "Run daily sales, field, and collections workflows.",
+        "longDescription": "A private operating plugin for Grass Blasters LLC with approval-controlled execution.",
+        "developerName": "Grass Blasters LLC",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": [
+          "Give me the Grass Blasters owner brief.",
+          "Handle today's sales follow-ups.",
+          "Check Jobber and Gmail for customers waiting on us."
+        ]
+      }
+    }
+  }
+}

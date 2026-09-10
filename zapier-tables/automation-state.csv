@@ -1,0 +1,2 @@
+external_key,rule,source_record_id,last_run_at,next_run_at,status,attempt_count,last_result,updated_at
+sample:quote_followup_3_days:4821,quote_followup_3_days,4821,2026-09-09T00:00:00Z,2026-09-12T00:00:00Z,waiting,0,,2026-09-09T00:00:00Z

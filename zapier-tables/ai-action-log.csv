@@ -1,0 +1,2 @@
+external_key,request_id,tool,target,risk,status,requested_at,approved_by,approved_at,executed_at,result_summary,source
+sample:request:test-1,test-1,create_internal_task,Sample Customer,green,completed,2026-09-09T00:00:00Z,,,2026-09-09T00:00:01Z,Sample row only,setup
