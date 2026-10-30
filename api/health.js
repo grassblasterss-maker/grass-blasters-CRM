@@ -2,7 +2,7 @@ import { methodNotAllowed } from '../lib/http.js';
 
 export default function handler(req, res) {
   if (req.method !== 'GET') return methodNotAllowed(res, ['GET']);
-  const required = ['ZAPIER_WEBHOOK_SECRET', 'ZAPIER_ACTION_WEBHOOK_URL', 'ZAPIER_TABLES_INTAKE_WEBHOOK_URL', 'GRASS_BLASTERS_API_KEY'];
+  const required = ['ZAPIER_WEBHOOK_SECRET', 'ZAPIER_ACTION_WEBHOOK_URL', 'ZAPIER_TABLES_INTAKE_WEBHOOK_URL', 'GRASS_BLASTERS_API_KEY', 'ZAPIER_OUTBOUND_SIGNING_SECRET'];
   const missing = required.filter((name) => !process.env[name]);
   return res.status(missing.length ? 503 : 200).json({
     ok: missing.length === 0,

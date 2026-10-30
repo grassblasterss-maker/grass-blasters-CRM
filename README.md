@@ -21,3 +21,7 @@ npm test
 ## Configure
 
 Start with [docs/SETUP-A-Z.md](docs/SETUP-A-Z.md), then use [docs/API.md](docs/API.md) for webhook payloads and responses.
+
+## Live website
+
+[Open Grass Blasters Jarvis](https://grass-blasters-crm.vercel.app/). Website availability was verified October 29, 2026; Jobber integration remains unconfigured. See [deployment status and remaining setup](docs/DEPLOYMENT-STATUS.md) for the verified checks and exact next steps.

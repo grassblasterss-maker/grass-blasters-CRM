@@ -92,3 +92,27 @@ test('health reports configuration without returning secret values', () => {
   assert.ok(res.body.missing.includes('ZAPIER_ACTION_WEBHOOK_URL'));
   assert.equal(JSON.stringify(res.body).includes('api-key'), false);
 });
+
+
+test('health requires outbound signing before reporting configured', () => {
+  const required = ['ZAPIER_WEBHOOK_SECRET', 'ZAPIER_ACTION_WEBHOOK_URL', 'ZAPIER_TABLES_INTAKE_WEBHOOK_URL', 'GRASS_BLASTERS_API_KEY', 'ZAPIER_OUTBOUND_SIGNING_SECRET'];
+  const previous = Object.fromEntries(required.map(key => [key, process.env[key]]));
+  try {
+    for (const key of required) process.env[key] = 'test-value';
+    delete process.env.ZAPIER_OUTBOUND_SIGNING_SECRET;
+    let res = responseMock();
+    health(request('GET'), res);
+    assert.equal(res.statusCode, 503);
+    assert.deepEqual(res.body.missing, ['ZAPIER_OUTBOUND_SIGNING_SECRET']);
+    process.env.ZAPIER_OUTBOUND_SIGNING_SECRET = 'test-signing';
+    res = responseMock();
+    health(request('GET'), res);
+    assert.equal(res.statusCode, 200);
+    assert.deepEqual(res.body.missing, []);
+  } finally {
+    for (const key of required) {
+      if (previous[key] === undefined) delete process.env[key];
+      else process.env[key] = previous[key];
+    }
+  }
+});
