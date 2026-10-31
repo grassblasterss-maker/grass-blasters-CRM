@@ -1,11 +1,17 @@
 {
   "name": "grass-blasters-os",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "scripts": {
-    "check": "node --check api/health.js && node --check api/integrations/status.js && node --check api/tools/execute.js && node --check api/tools/manifest.js && node --check api/zapier/intake.js",
-    "test": "node --test test/*.test.js"
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/*.test.js",
+    "dev": "node scripts/dev.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@clerk/backend": "3.26.5"
+  }
 }

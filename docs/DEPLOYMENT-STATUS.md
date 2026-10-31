@@ -1,3 +1,5 @@
+> Historical V0.3 notes. For the current implementation and remaining work, see [Jarvis launch checklist](JARVIS-LAUNCH-CHECKLIST.md) and [secure workspace setup](SECURE-WORKSPACE-SETUP.md).
+
 # Deployment status and remaining setup
 
 Verified October 29, 2026 (America/New_York).

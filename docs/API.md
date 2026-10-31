@@ -1,3 +1,5 @@
+> V0.4 adds Clerk-authenticated GET /api/auth/session and GET /api/jobber/clients. GET /api/integrations/status now requires an owner Clerk bearer session. GET /api/auth/config is public and returns only the configured flag and publishable key. The machine API below remains separate from browser sessions. See SECURE-WORKSPACE-SETUP.md.
+
 # API reference
 
 ## Authentication

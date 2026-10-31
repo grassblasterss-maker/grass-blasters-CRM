@@ -1,3 +1,5 @@
+> Historical V0.3 notes. For the current implementation and remaining work, see [Jarvis launch checklist](JARVIS-LAUNCH-CHECKLIST.md) and [secure workspace setup](SECURE-WORKSPACE-SETUP.md).
+
 # Grass Blasters OS — V0.3 architecture
 
 ## Product rule
