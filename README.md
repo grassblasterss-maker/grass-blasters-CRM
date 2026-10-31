@@ -1,27 +1,26 @@
-# Grass Blasters OS
+# Grass Blasters Jarvis
 
-Grass Blasters OS is a lightweight operating layer around Jobber. V0.3 uses ChatGPT plus a private company plugin for reasoning, Zapier MCP for interactive Jobber/Tables actions, and Zaps for background automation. It does not require Supabase or an OpenAI API key.
+Jarvis is an oversight and planning workspace around Jobber. Jobber remains responsible for operational records, time tracking, invoicing, and payments.
 
-## Included
-
-- Static V2 dashboard.
-- Secure Vercel API routes for event intake, tool execution, health, and configuration status.
-- Green/yellow/red action policy with idempotency requirements.
-- Portable Grass Blasters plugin and operating skill.
-- Four Zapier Tables CSV templates.
-- Node test suite with no third-party packages.
+Version 0.4 includes owner/assistant email access via Clerk, server-enforced permissions, a protected paginated Jobber client-read pilot, a materials worksheet, a content filming-brief/prompt builder, browser voice navigation, and an implementation checklist. No sample business totals or simulated successful actions are displayed.
 
 ## Validate
 
 ```sh
+npm ci
 npm run check
 npm test
+npm run dev
 ```
 
-## Configure
+## Activate
 
-Start with [docs/SETUP-A-Z.md](docs/SETUP-A-Z.md), then use [docs/API.md](docs/API.md) for webhook payloads and responses.
+Follow [secure workspace setup](docs/SECURE-WORKSPACE-SETUP.md) and the [master launch checklist](docs/JARVIS-LAUNCH-CHECKLIST.md). Authentication and live integrations require production configuration and real-account tests. No accounts, paid services, invitations, or customer sends are provisioned automatically.
 
-## Live website
+The material worksheet and content brief are download-only, not cloud-saved. Content AI generation, social publishing, Jobber draft creation from the browser, persistent OAuth refresh, private uploads, and live financial reporting remain pending.
 
-[Open Grass Blasters Jarvis](https://grass-blasters-crm.vercel.app/). Website availability was verified October 29, 2026; Jobber integration remains unconfigured. See [deployment status and remaining setup](docs/DEPLOYMENT-STATUS.md) for the verified checks and exact next steps.
+## Existing deployment
+
+[Open Jarvis](https://grass-blasters-crm.vercel.app/). On October 31, 2026 the public site returned HTTP 200 but still served the older demo UI; integration settings were missing. Vercel project listing worked, while project/deployment details returned permission errors. This branch must be configured, tested and deployed before these changes are live.
+
+The legacy webhook/action adapter remains available for trusted automation callers. See [API documentation](docs/API.md) and [Zapier setup](docs/SETUP-A-Z.md). A ChatGPT-connected service is separate from the website's runtime credentials.
